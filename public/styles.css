@@ -1,0 +1,135 @@
+/* Globální nastavení */
+body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+    background-color: #f8f9fa; 
+    color: #333;
+}
+
+/* Horní lišta */
+.top-bar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+/* Karty a kontejnery */
+.card, .rocnik-card { 
+    background: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    margin-bottom: 25px;
+}
+
+.card {
+    max-width: 600px;
+}
+
+.rocnik-header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    border-bottom: 2px solid #0056b3; 
+    padding-bottom: 5px; 
+    margin-bottom: 10px; 
+}
+
+.rocnik-titulek { 
+    color: #0056b3; 
+    margin: 0; 
+}
+
+.rocnik-logo { 
+    max-height: 60px; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+/* Tabulky */
+table, .tabulka-etap { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 15px; 
+    font-size: 14px; 
+}
+
+th, td { 
+    padding: 8px 12px; 
+    border: 1px solid #dee2e6; 
+    text-align: left; 
+}
+
+th { 
+    background-color: #343a40; 
+    color: white; 
+}
+
+tr:nth-child(even) { 
+    background-color: #f2f2f2; 
+}
+
+/* Tlačítka a odkaze */
+.btn { 
+    background: #0056b3; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.btn-add { 
+    background: #28a745; 
+    color: #fff; 
+    padding: 10px 15px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+}
+
+.btn-add:hover { 
+    background: #218838; 
+}
+
+.btn-secondary { 
+    background: #6c757d; 
+    margin-left: 10px; 
+}
+
+.btn-back, .btn-link { 
+    color: #0056b3; 
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+.btn-back {
+    display: inline-block; 
+    margin-bottom: 15px; 
+}
+
+.btn-link:hover, .btn-back:hover { 
+    text-decoration: underline; 
+}
+
+/* Formuláře */
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+input, select { 
+    width: 100%; 
+    padding: 8px; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

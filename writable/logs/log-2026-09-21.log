@@ -1,0 +1,989 @@
+CRITICAL - 2026-09-21 11:41:54 --> ParseError: syntax error, unexpected token "return", expecting "function" or "const"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Cyklo.php on line 87.
+ 1 FCPATH\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\laragon\\www\\kec\\ProjektTretakCyklo\\vendor\\composer/../../app\\Controllers\\Cyklo.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Cyklo')
+ 3 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Cyklo')
+ 4 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 5 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('/')
+ 6 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:42:42 --> Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:42:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:42:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:42:42 --> [Caused by] mysqli_sql_exception: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:43:05 --> Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:43:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:43:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:43:05 --> [Caused by] mysqli_sql_exception: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:43:50 --> Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:43:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:43:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:43:50 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(53): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:46:31 --> Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(58): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:46:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(58): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:46:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 APPPATH\Controllers\Cyklo.php(58): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:46:31 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(58): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM race 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:47:21 --> Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:47:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:47:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 3 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:47:21 --> [Caused by] mysqli_sql_exception: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:47:21 --> Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:47:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:47:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 3 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:47:21 --> [Caused by] mysqli_sql_exception: Table 'kec.cp_race' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, 
+                   COALESCE(
+                       (SELECT value FROM cp_race WHERE id = r.id),
+                       (SELECT race_name FROM cp_race WHERE id = r.id),
+                       \'Závod \' || id
+                   ) AS name
+            FROM cp_race r
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY id ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:49:58 --> Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:49:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:49:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:49:58 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+            SELECT id, name 
+            FROM cp_testa_races 
+            WHERE gender = \'M\' AND category = \'E\'
+            ORDER BY name ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-21 11:51:00 --> Unknown column 'gender' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:51:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'gender' in 'where clause'
+[Method: GET, Route: cyklo/pridatRocnik]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:51:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'gender' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 3 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 11:51:00 --> [Caused by] mysqli_sql_exception: Unknown column 'gender' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 4 APPPATH\Controllers\Cyklo.php(52): CodeIgniter\Database\BaseConnection->query('
+        SELECT * 
+        FROM cp_testa_races 
+        WHERE gender = \'M\' AND category = \'E\'
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->pridatRocnik()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 12:37:11 --> ErrorException: Undefined variable $rocnik
+[Method: GET, Route: /]
+in APPPATH\Views\pariz_nice.php on line 24.
+ 1 APPPATH\Views\pariz_nice.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rocnik', 'C:\\laragon\\www\\kec\\ProjektTretakCyklo\\app\\Views\\pariz_nice.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\kec\\ProjektTretakCyklo\\app\\Views\\pariz_nice.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('pariz_nice', [], true)
+ 5 APPPATH\Controllers\Cyklo.php(42): view('pariz_nice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-21 12:51:24 --> ErrorException: Undefined array key "logo"
+[Method: GET, Route: /]
+in APPPATH\Views\pariz_nice.php on line 39.
+ 1 APPPATH\Views\pariz_nice.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logo"', 'C:\\laragon\\www\\kec\\ProjektTretakCyklo\\app\\Views\\pariz_nice.php', 39)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\kec\\ProjektTretakCyklo\\app\\Views\\pariz_nice.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('pariz_nice', [], true)
+ 5 APPPATH\Controllers\Cyklo.php(42): view('pariz_nice', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cyklo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cyklo))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
